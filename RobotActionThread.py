@@ -1,11 +1,5 @@
 
-import sys
-sys.path.append('../')
 import threading
-import time
-from HamsterAPI.comm_ble import RobotComm
-
-import Tkinter as tk
 
 class RobotActionThread(threading.Thread):
 	def __init__(self, robotList):
@@ -15,6 +9,8 @@ class RobotActionThread(threading.Thread):
 		self.stop = False
 
 		return
+
+
 
 	def run(self):
 		while not self.stop:
